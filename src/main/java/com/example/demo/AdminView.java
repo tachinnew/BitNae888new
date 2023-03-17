@@ -10,5 +10,7 @@ import com.vaadin.flow.router.Route;
 public class AdminView extends VerticalLayout{
     H1 title = new H1("BitNae888");
 
-    
+    public AdminView(){
+        
+    }
 }
