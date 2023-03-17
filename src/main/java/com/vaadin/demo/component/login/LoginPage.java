@@ -6,6 +6,7 @@ import com.vaadin.flow.component.UI;
 import com.vaadin.flow.component.html.Div;
 import com.vaadin.flow.router.PageTitle;
 import com.vaadin.flow.router.Route;
+import com.example.demo.Data.*;
 
 @Route("login")
 @PageTitle("BitNae888")
@@ -22,23 +23,27 @@ public class LoginPage extends Div {
         loginOverlay.getElement().setAttribute("no-autofocus", "");
 
         add(loginOverlay);
-        
+
         loginOverlay.addLoginListener(event ->{
-            if("user".equals(event.getUsername())){
-                if("111".equals(event.getPassword())){
-                    UI.getCurrent().navigate("userView");
+            Password.checkUserIDP(event.getUsername(), event.getPassword());
+            if(Password.getIA()){
+                if(Password.getPA()){
+                    Password.checkRole(event.getUsername());
+                    if(Password.getIAD()){
+                        Notification.show("Welcome Admin of BitNae888");
+                        EnterStatus.setEnterAdminStatus(true);
+                        EnterStatus.setEnterStatus(true);
+                        UI.getCurrent().navigate("admin");
+                        return;
+                    }
                     Notification.show("Welcome to BitNae888");
+                    EnterStatus.setEnterStatus(true);
+                    UI.getCurrent().navigate("userView");
                     return;
                 }
-            } 
-            else if ("admin".equals(event.getUsername())){
-                if("111".equals(event.getPassword())){
-                    UI.getCurrent().navigate("admin");
-                    Notification.show("Welcome admin");
-                    return;
-               } 
+                Notification.show("Wrong Id or Password boi!");
+                return;
             }
-
             Notification.show("Wrong Id or Password boi!");
 
         });
