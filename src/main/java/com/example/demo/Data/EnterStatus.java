@@ -1,4 +1,4 @@
-package com.example.demo.Data;
+package com.example.demo.data;
 
 public class EnterStatus {
     private static boolean enterStatus = false;

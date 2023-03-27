@@ -2,15 +2,15 @@ package com.vaadin.demo.component.login;
 
 import com.vaadin.flow.component.login.LoginOverlay;
 import com.vaadin.flow.component.notification.Notification;
+import com.example.demo.data.*;
 import com.vaadin.flow.component.UI;
 import com.vaadin.flow.component.html.Div;
 import com.vaadin.flow.router.PageTitle;
 import com.vaadin.flow.router.Route;
-import com.example.demo.Data.*;
 
 @Route("login")
 @PageTitle("BitNae888")
-public class LoginPage extends Div {
+public class LoginPage extends Div {    
 
     private LoginOverlay loginOverlay = new LoginOverlay();
 
@@ -49,7 +49,8 @@ public class LoginPage extends Div {
         });
 
         loginOverlay.addForgotPasswordListener(event ->{
-            UI.getCurrent().navigate("ForgotPassword");
+            Notification.show("User Forgot The Password?");
+            UI.getCurrent().navigate("UserForgotPassword");
         });
     }
 

@@ -1,10 +1,10 @@
 package com.example.demo;
 
+import com.example.demo.data.*;
 import com.vaadin.demo.component.applayout.WebView;
 import com.vaadin.flow.component.orderedlayout.VerticalLayout;
 import com.vaadin.flow.router.PageTitle;
 import com.vaadin.flow.router.Route;
-import com.example.demo.Data.*;
 
 @Route("userView")
 @PageTitle("BitNae888")

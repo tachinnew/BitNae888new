@@ -1,15 +1,20 @@
 package com.vaadin.demo.component.applayout;
 
+import com.vaadin.flow.component.UI;
 import com.vaadin.flow.component.applayout.AppLayout;
+import com.vaadin.flow.component.dependency.CssImport;
 import com.vaadin.flow.component.html.H1;
 import com.vaadin.flow.component.tabs.Tab;
 import com.vaadin.flow.component.tabs.Tabs;
 import com.vaadin.flow.router.PageTitle;
 import com.vaadin.flow.router.Route;
 import com.vaadin.flow.router.RouterLink;
+import com.vaadin.flow.theme.Theme;
 
 @PageTitle("BitNae888")
 @Route("applayout")
+/* @Theme("mytheme")
+@CssImport("./mainBG.css") */
 public class WebView extends AppLayout {
 
     public WebView() {

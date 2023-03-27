@@ -1,4 +1,4 @@
-package com.example.demo.Data;
+package com.example.demo.data;
 
 import java.util.ArrayList;
 
@@ -11,12 +11,22 @@ public class Password {
     private static boolean pAlreadyCheck = false;
     private static boolean isAdmin = false;
 
+    private static String userName;
+
     public static void startPassword(){
         addPassword("TachinTheAdmin1","qazwsxedc123");
         addPassword("TachinTheAdmin2","qazwsxedc123");
         addPassword("TachinTheAdmin3","qazwsxedc123");
         addPassword("TachinTheAdmin4","qazwsxedc123");
         addAdmin("TachinTheAdmin1");
+    }
+
+    private static void setUserName(String name){
+        userName = name;
+    }
+
+    public static String getUserName(){
+        return userName;
     }
 
     private static void setIA(boolean status){
@@ -61,6 +71,7 @@ public class Password {
             if(IDw.equals(iCollecter.get(i))){
                 setIA(true);
                 if(Passwordw.equals(pCollecter.get(i))){
+                    setUserName(IDw);
                     setPA(true);
                     return;
                 }

@@ -1,6 +1,6 @@
 package com.example.demo;
 
-import com.example.demo.Data.Password;
+import com.example.demo.data.Password;
 import com.vaadin.demo.component.login.LoginPage;
 import com.vaadin.flow.component.orderedlayout.VerticalLayout;
 import com.vaadin.flow.router.PageTitle;

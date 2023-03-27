@@ -1,6 +1,6 @@
-package com.example.demo.Data.Role;
+package com.example.demo.data.role;
 
-import com.example.demo.Data.Password;
+import com.example.demo.data.Password;
 
 public class Admin extends Password{
     

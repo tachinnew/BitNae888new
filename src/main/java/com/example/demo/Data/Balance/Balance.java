@@ -1,22 +1,27 @@
-package com.example.demo.Data.Balance;
+package com.example.demo.data.balance;
+
+import com.example.demo.data.role.User;
 
 public class Balance {
 
-    private double balance;
-
-    public void setBalance(double balance){
-        this.balance = balance;
+    public static void setBalance(double balance){
+        User.balance = balance;
     }
 
-    public void withDraw(double money){
-        this.balance -= money;
+    public static double getBalance(){
+        return User.balance;
     }
 
-    public void addBalance(double money){
-        this.balance += money;
+    public static void withDraw(double money){
+        User.balance -= money;
     }
 
-    public double getBalance(){
-        return this.balance;
+    public static void addBalance(double money){
+        User.balance += money;
     }
+
+    public static void delBalance(double money){
+        User.balance -= money;
+    }
+
 }

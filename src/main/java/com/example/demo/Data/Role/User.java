@@ -1,15 +1,28 @@
-package com.example.demo.Data.Role;
+package com.example.demo.data.role;
 
-public class User {
+import com.example.demo.data.Password;
+import com.example.demo.data.balance.Balance;
 
-    private String name;
+public class User extends Balance{
 
-    public void setName(String Name){
+    private static String name;
+    public static double balance;
 
+    public static void StartUser(){
+        setName();
+        getUserBalance();
     }
 
-    public String getName(){
-        return this.name;
+    protected static void setName(){
+        name = Password.getUserName();
+    }
+
+    public static double getUserBalance(){
+        return Balance.getBalance();
+    }
+
+    public static String getName(){
+        return name;
     }
 
 }
