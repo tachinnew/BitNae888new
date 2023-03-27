@@ -4,11 +4,7 @@ import com.vaadin.flow.component.UI;
 import com.vaadin.flow.component.html.H1;
 import com.vaadin.flow.component.html.H2;
 import com.vaadin.flow.component.orderedlayout.VerticalLayout;
-import com.vaadin.flow.router.PageTitle;
-import com.vaadin.flow.router.Route;
 
-@Route("ForgotPassword")
-@PageTitle("BitNae888")
 public class ForgotPassword extends VerticalLayout{
     H1 title = new H1("BitNae888");
     H2 h2 = new H2("Welcome to forgot your password page");

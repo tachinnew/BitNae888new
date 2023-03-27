@@ -1,7 +1,6 @@
 package com.example.demo;
 
 import com.example.demo.data.*;
-import com.vaadin.demo.component.applayout.WebView;
 import com.vaadin.flow.component.orderedlayout.VerticalLayout;
 import com.vaadin.flow.router.PageTitle;
 import com.vaadin.flow.router.Route;
@@ -12,7 +11,7 @@ public class UserWebsite extends VerticalLayout{
 
     public UserWebsite() throws Exception{ 
         if(EnterStatus.getEnterStatus()){
-            add(new WebView());
+            add(new UserView());
             return;
         }
         throw new Exception("You cann't reach webnsite without login!!");

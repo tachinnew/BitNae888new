@@ -1,4 +1,4 @@
-package com.vaadin.demo.component.applayout;
+package com.example.demo;
 
 import com.vaadin.flow.component.UI;
 import com.vaadin.flow.component.Unit;
@@ -72,7 +72,7 @@ public class FogetPassword extends VerticalLayout{
         image.addClickListener(click ->{
             Notification.show("User go back to Login Page");
             UI.getCurrent().navigate("");
-            UI.getCurrent().getPage().reload();
+            // UI.getCurrent().getPage().reload();
         });
                    
         add(imageLayout);
